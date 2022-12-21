@@ -18,7 +18,7 @@ An operator may:
 
 *Use Case Name: Retrieve the target List*  
 Actor: Operator  
-Prerequisite: When the system starts its first operation.
+Prerequisite: When the system starts.  
 Description:  
 1. The system automatically retrieve the target list from the [Google Sheet](https://docs.google.com/spreadsheets/d/1lb8m-a9SYrr1ImEoVnNulC6iEFg9kNFWiX87mBgy-H8/edit#gid=0).
 2. The URL and name is then saved in a `JSON` file called `source.json`.
@@ -26,6 +26,7 @@ Description:
 
 *Use Case Name: Search through the target list*  
 Actor: Operator  
+Prerequisite: When the system starts `OR` the timer runs off.  
 Description:   
 1. The URL is retrieved from the `source.json`.
 2. The bot goes through every single URL of the list, to retrieve the date of the latest activity, with the latest today's pin if possible.
