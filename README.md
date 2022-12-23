@@ -3,6 +3,9 @@ This is a web scrapper dedicated to analyse activity data from zhihu.com, which 
 
 The software would be designed as an exe to run on window starts, and perform automatically in background - as long as the host stays online.
 
+## Program Structure
+
+
 ## Use Case Analysis
 
 Suppose that the Web Scraper has only one type of user (operator), and the following business process:
@@ -20,8 +23,8 @@ An operator may:
 Actor: Operator  
 Prerequisite: When the system starts.  
 Description:  
-1. The system automatically retrieve the target list from the [Google Sheet](https://docs.google.com/spreadsheets/d/1lb8m-a9SYrr1ImEoVnNulC6iEFg9kNFWiX87mBgy-H8/edit#gid=0).
-2. The URL and name is then saved in a `JSON` file called `source.json`.
+1. The system automatically retrieve the target list from the [Google Sheet](https://docs.google.com/spreadsheets/d/1lb8m-a9SYrr1ImEoVnNulC6iEFg9kNFWiX87mBgy-H8/edit#gid=0) through the use of `Google Cloud Service Account` (important details retrieved in `source.json`).
+2. The URL and name is then cleansed and saved in a `JSON` file called `database.json`.
 3. The normal flow is then resumed.
 
 *Use Case Name: Search through the target list*  
